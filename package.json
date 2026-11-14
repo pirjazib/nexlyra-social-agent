@@ -1,0 +1,6 @@
+{
+  "name":"nexlyra-social-agent-serverless","version":"2.1.0","private":true,"type":"module",
+  "scripts":{"dev":"netlify dev","check":"node --test tests/*.test.mjs"},
+  "dependencies":{"@netlify/blobs":"^9.0.0","sharp":"^0.34.0"},
+  "devDependencies":{"netlify-cli":"^23.0.0"},"engines":{"node":">=22"}
+}
