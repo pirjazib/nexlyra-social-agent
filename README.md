@@ -7,7 +7,7 @@ A deployable Netlify application for **personal** LinkedIn and X accounts. Fully
 - Modern private web dashboard with post editing, approval, manual publishing, emergency pause, run logs, and account readiness indicators.
 - UTC-based Netlify Scheduled Functions for **09:00 IST (03:30 UTC)** and **18:00 IST (12:30 UTC)**, routed to a Background Function to avoid scheduled-function 30-second runtime limit.
 - Netlify Blobs site-wide store for drafts, publication history, and settings across deploys.
-- Editorial AI integration using OpenAI API (optional fallback writing library if unset).
+- Editorial AI integration using Google Gemini API (optional fallback writing library if unset).
 - Current headline discovery via Google News RSS (headlines only; not verified reporting), with cautious prompt rules.
 - Original, programmatically designed PNG editorial graphics using SVG + sharp. Some posts automatically text-only; dashboard can override.
 - Official LinkedIn REST posts/images endpoints and X v2 posts/media endpoints with OAuth 1.0a.
@@ -22,7 +22,7 @@ A deployable Netlify application for **personal** LinkedIn and X accounts. Fully
    - `DASHBOARD_PASSWORD`: a long, unique admin password.
    - `SESSION_SECRET`: a separate 32+ character random secret for signed login cookies.
    - `CRON_SECRET`: a separate 32+ character random secret for dispatching background jobs.
-   - `OPENAI_API_KEY` and optional `OPENAI_MODEL` for non-template writing.
+   - `GEMINI_API_KEY` and optional `GEMINI_MODEL` for non-template writing.
    - `LINKEDIN_ACCESS_TOKEN` and `LINKEDIN_AUTHOR_URN` (`urn:li:person:...`) for personal LinkedIn.
    - `LINKEDIN_VERSION` e.g. `202610` (update when no longer supported).
    - `X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_TOKEN_SECRET` with write permissions for X.
